@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>Give Away Facebook</title>
+
+  <link href="assets/css/bootstrap.min.css" rel="stylesheet" type="text/css">
+  <link href="assets/css/icons.css" rel="stylesheet" type="text/css">
+  <link href="assets/css/style.css" rel="stylesheet" type="text/css">
+  <link href="assets/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+  <link href="assets/material-design-iconic-font/css/material-design-iconic-font.css" rel="stylesheet" type="text/css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/material-design-iconic-font/2.2.0/css/material-design-iconic-font.min.css" type="text/css">
+</head>
+<body>
+  <div class="container-fluid">
+    <div class="row">
+     <div class="col-lg-6">
+      <div class="card m-b-20">
+       <div class="card-body">
+        <h2 class="mt-0 header-title">Give Away Facebook</h2>
+
+        <form class="" action="#">
+         <div class="form-group">
+          <label>Access Token</label>
+          <div><input data-parsley-type="alphanum" type="text" class="form-control" id="accessToken" value=""></div>
+        </div>
+        <div class="form-group">
+          <label>Số nhỏ nhất</label>
+          <div><input data-parsley-type="number" type="text" class="form-control" id="min" value="1"></div>
+        </div>
+        <div class="form-group">
+          <label>Số lớn nhất</label>
+          <div><input data-parsley-type="number" type="text" class="form-control" id="max" value="100"></div>
+        </div>
+        <div class="form-group">
+          <label>Post ID</label>
+          <div><input data-parsley-type="number" type="text" class="form-control" id="idPost" value=""></div>
+        </div>
+
+        <p style='margin-bottom:3x !important;' >Tự động quay</p>
+        <div>
+         <input type="checkbox" id="switch1" switch="none"> 
+         <label for="switch1" data-on-label="Yes" data-off-label="No"></label> 
+       </div>
+
+       <div class="form-group">
+        <div>
+          <button type="submit" id="submit" class="btn rounded mw-md btn-dark">Bắt đầu</button> 
+
+        </div>
+      </div>
+      <p><small>Coder <i class="fa fa-heart"></i> by <a target="_blank" href="https://www.facebook.com/sven307">Võ Văn Hoàng Tuân</a></small></p>
+    </form>
+  </div>
+</div>
+</div>
+<!-- end col -->
+<div class="col-lg-6">
+  <div class="card m-b-20">
+   <div class="card-body">
+    <h2 class="mt-0 header-title">Thông tin</h2>
+    <p class='loading-notice'></p>
+    <br/>
+    <div class="alert alert-info" role="alert" id="notice" style="display: none;">
+      
+    </div>
+    <p>Số may mắn : <strong id="lucky_number"></strong></p>
+
+    <div class="data-list" id="dataList">
+        
+    </div>
+    <p><h5>Danh sách trúng thưởng</h5></p>
+    <div class='data-list' id="response">
+
+    </div>
+
+  </div>
+</div>
+</div>
+</div>
+</div>
+
+<script src="assets/js/jquery.min.js"></script>
+<script src="assets/js/theme.js"></script>
+<!-- <script src="assets/js/bootstrap.bundle.min.js"></script> -->
+<script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/2.1.1/socket.io.js"></script>
+<script src="assets/js/waves.min.js"></script>
+<script src="index.js"></script>
+
+</body>
+
+</html>

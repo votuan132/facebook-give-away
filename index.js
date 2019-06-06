@@ -20,5 +20,5 @@ app.post('/check', function(req, res){
 
 
 app.listen(port, function(){
-	console.log('Listening port '+ port);
+	console.log('Listening  http://localhost:'+ port);
 });

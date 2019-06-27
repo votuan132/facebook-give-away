@@ -5,6 +5,8 @@ async function getCmt(token, idPost, limit){
 	.then(function(response){
 		var dataReturn =  response.data.data;
 		dataReturn.reverse();
+
+		// if isset object => have tag
 		var filterTag = dataReturn.filter(function(item){
 			return typeof item.message_tags == 'object';
 		});

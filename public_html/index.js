@@ -6,6 +6,7 @@ var max;
 var postId;
 var accessToken;
 var repeat;
+var checkTag;
 
 document.getElementById('submit').addEventListener('click', function(){
 	notice = document.getElementById('notice');
@@ -15,14 +16,16 @@ document.getElementById('submit').addEventListener('click', function(){
 	max = document.getElementById('max').value;
 	postId = document.getElementById('idPost').value;
 	accessToken = document.getElementById('accessToken').value;
-	var check = document.getElementById('switch1').checked;
 
+	var spin = document.getElementById('spin').checked;
+	checkTag = document.getElementById('checkTag').checked;
+	
 	dataList.innerHTML = '';
 	notice.style.cssText = ''; 
 
 	notice.innerHTML = 'Đang khởi tạo ...';
 
-	if(check){
+	if(spin){
 		repeat = setInterval(run, 2000);
 	}else{
 		run();
@@ -49,9 +52,12 @@ function run(){
 	lucky_number.innerHTML = randomNumber;
 
 	axios.post('/check', {
+
 		random: randomNumber,
 		postId: postId,
-		accessToken: accessToken
+		accessToken: accessToken,
+		checkTag: checkTag
+		
 	}).then(function(data){
 		var data = data.data;
 

@@ -4,11 +4,11 @@
   <meta charset="utf-8">
   <title>Give Away Facebook</title>
 
-  <link href="assets/css/bootstrap.min.css" rel="stylesheet" type="text/css">
-  <link href="assets/css/icons.css" rel="stylesheet" type="text/css">
-  <link href="assets/css/style.css" rel="stylesheet" type="text/css">
-  <link href="assets/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
-  <link href="assets/material-design-iconic-font/css/material-design-iconic-font.css" rel="stylesheet" type="text/css">
+  <link href="../assets/css/bootstrap.min.css" rel="stylesheet" type="text/css">
+  <link href="../assets/css/icons.css" rel="stylesheet" type="text/css">
+  <link href="../assets/css/style.css" rel="stylesheet" type="text/css">
+  <link href="../assets/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+  <link href="../assets/material-design-iconic-font/css/material-design-iconic-font.css" rel="stylesheet" type="text/css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/material-design-iconic-font/2.2.0/css/material-design-iconic-font.min.css" type="text/css">
 </head>
 <body>
@@ -36,11 +36,15 @@
           <label>Post ID</label>
           <div><input data-parsley-type="number" type="text" class="form-control" id="idPost" value=""></div>
         </div>
-
-        <p style='margin-bottom:3x !important;' >Tự động quay</p>
-        <div>
-         <input type="checkbox" id="switch1" switch="none"> 
-         <label for="switch1" data-on-label="Yes" data-off-label="No"></label> 
+        <div class="form-group">
+          <p style='margin-bottom:3x !important;' >Tự động quay</p>
+         <input type="checkbox" id="spin" switch="none"> 
+         <label for="spin" data-on-label="Yes" data-off-label="No"></label> 
+       </div>
+       <div class="form-group">
+          <p style='margin-bottom:3x !important;' >Kiểm tra Tag</p>
+         <input type="checkbox" id="checkTag" switch="none"> 
+         <label for="checkTag" data-on-label="Yes" data-off-label="No"></label> 
        </div>
 
        <div class="form-group">
@@ -80,13 +84,16 @@
 </div>
 </div>
 
-<script src="assets/js/jquery.min.js"></script>
-<script src="assets/js/theme.js"></script>
+
+
+
+<script src="../assets/js/jquery.min.js"></script>
+<script src="../assets/js/theme.js"></script>
 <!-- <script src="assets/js/bootstrap.bundle.min.js"></script> -->
 <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/2.1.1/socket.io.js"></script>
-<script src="assets/js/waves.min.js"></script>
-<script src="index.js"></script>
+<!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/2.1.1/socket.io.js"></script> -->
+<script src="../assets/js/waves.min.js"></script>
+<script src="../index.js"></script>
 
 </body>
 

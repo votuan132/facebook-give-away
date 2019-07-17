@@ -6,8 +6,9 @@ function checkData(dataCheck){
 	var accessToken = dataCheck.accessToken;
 	var idPost = dataCheck.postId;
 	var randomNumber = dataCheck.random;
-	var limit = 10000000;
-	var cmt = getCmt(accessToken, idPost, limit);
+	var checkTag = dataCheck.checkTag;
+
+	var cmt = getCmt(accessToken, idPost, 10000000, checkTag);
 
 	
 	return cmt.then(function(data){

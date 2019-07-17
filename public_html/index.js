@@ -61,7 +61,7 @@ function run(){
 	}).then(function(data){
 		var data = data.data;
 
-		if(data.length != 0){
+		if(data != false){
 
 			clearInterval(repeat);
 			dataList.innerHTML = data.join('');

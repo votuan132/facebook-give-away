@@ -5,18 +5,21 @@ async function getCmt(token, idPost, limit, checkTag){
 	.then(function(response){
 
 		var dataReturn =  response.data.data;
+
 		dataReturn.reverse();
 		// đảo ngược mảng để xếp theo ngày tháng năm
 
 		// if isset object => have tag
 		if (checkTag) {
-			var filterTag = dataReturn.filter(function(item){
+			var dataReturn = dataReturn.filter(function(item){
 				return typeof item.message_tags == 'object';
 			});
+			// console.log('1111');
 		}
-		
 
-		return filterTag.map(function(item){
+		// console.log(dataReturn);
+
+		return dataReturn.map(function(item){
 			return {
 				id: item.from.id,
 				name: item.from.name,
@@ -26,7 +29,7 @@ async function getCmt(token, idPost, limit, checkTag){
 				time: item.created_time
 			};
 		})
-		// return OptimalArray;
+		// return filterTag;
 
 	})
 	.catch(function(error){

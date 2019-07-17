@@ -1,6 +1,6 @@
 var getCmt = require('./cmt');
 var getShare = require('./share');
-
+const axios = require('axios');
 
 function checkData(dataCheck){
 	var accessToken = dataCheck.accessToken;
@@ -10,19 +10,18 @@ function checkData(dataCheck){
 
 	var cmt = getCmt(accessToken, idPost, 10000000, checkTag);
 
-	
 	return cmt.then(function(data){
-		
 		if (data != false) {
+			// console.log(data);
 			var filterRandom = checkNumber(data, randomNumber);
-			
 			return filterRandom;
-			
 		}else{
 			return false;
 		}
 	});
+	
 
+	
 }
 
 function checkNumber(number, random){
@@ -49,5 +48,6 @@ function fillHtml(data, number){
 
 	return html;
 }
+
 
 module.exports = checkData;

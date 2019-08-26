@@ -10,6 +10,9 @@ app.get('', function(req, res){
 
 });
 
+
+
+
 app.post('/check', function(req, res){
 	checkData(req.body).then(function(data){
 		res.send(data);
